@@ -1,0 +1,9 @@
+- hosts: local
+  # sudo: yes
+  become: yes
+  become_method: sudo
+  roles:
+    - basic_setup
+      #- ides
+      #- lang
+      #- comm

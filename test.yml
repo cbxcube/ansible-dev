@@ -1,0 +1,12 @@
+---
+- name: test kimsufi
+  hosts: kimsufi
+  become: no
+  tasks:
+    - name: get uptime
+      shell: uptime
+      register: servertime
+        
+    - debug: msg=ansible_facts.date_time.date
+    - debug: msg={{ ansible_facts }}
+    - debug: var=servertime
